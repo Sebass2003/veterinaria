@@ -20,29 +20,29 @@ function validate(form)
       {
         if (field == "") return "No Ingreso el ID.\n"
         else if (field.length < 6)
-          return "El ID debe tener al menos de 6 caracteres.\n"
+          return "El ID debe tener al menos de 6 Caracteres.\n"
         return ""
         
       }
 
       function validatefecha(field)
       {
-        return (field == "") ? "No ingreso la fecha.\n" : ""
+        return (field == "") ? "No ingreso la Fecha.\n" : ""
       }
 
       function validatetipo(field)
       {
-        return (field == "") ? "No ingreso el tipo de identificacion.\n" : ""
+        return (field == "") ? "No ingreso el tipo de Identificacion.\n" : ""
       }
 
       function validatenumc(field)
       {
-        return (field == "") ? "No ingreso el numero de contacto.\n" : ""
+        return (field == "") ? "No ingreso el numero de Contacto.\n" : ""
       }
 
       function validatetextarea(field)
       {
-        return (field == "") ? "No ingreso el motivo.\n" : ""
+        return (field == "") ? "No ingreso el Motivo.\n" : ""
       }
 
       function validatenombre(field)
