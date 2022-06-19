@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulario</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <script type="text/javascript" src="validacion.js"></script>
+  <link href="img/guella.png" rel="icon">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<style> 
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('imagen.jpg');
+  font:600 16px/18px 'Open Sans',sans-serif;
+  color: #000;
+
+}
+
+
+.form-register {
+  width: 400px;
+  background: #4a86c2;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  border-radius: 4px;
+  font-family: 'calibri';
+  color: rgb(28, 25, 25);
+  box-shadow: 7px 13px 37px #000;
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  width: 100%;
+  background: #e5e7e9;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #dac4c4;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: white;
+}
+
+.form-register .botons {
+  width: 100%;
+  background: #9f0000;
+  border: none;
+  padding: 12px;
+  color: rgb(18, 14, 14);
+  margin: 16px 0;
+  font-size: 16px;
+}
+.form-register .boton {
+  width: 32.5%;
+  background: #ffffff;
+  border: none;
+  padding: 12px;
+  color: rgb(11, 10, 10);
+  margin: 16px 0;
+  font-size: 16px;
+}
+.h4 {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+   <!-- Fixed navbar -->
+   <div id="navigation" class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="iniciodesesion.html">Inicia Sesión</a></li>
+          <li><a href="Formulario.html">Agenda Tu Cita</a></li>
+          <li><a href="catalogo.html">Conoce Nuestros Catálogo</a></li>
+          <li><a href="fh.html">Conoce el Historial Clinico de tu Mascota</a></li>
+          <li><a href="index.html" class="smoothscroll">Volver al Inicio</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+    <form action="conexion.php" method="post" onsubmit="return validate(this)">
+        <section class="form-register">
+            <h4 class="h4">Solicitud historial mascota</h4>
+            <hr>
+            <h5 class="h4">Datos solicitante</h5>
+            <hr><br>
+            <input class="controls" type="text" name="nombre" placeholder="Ingrese su nombre">
+            <b>Ingrese tipo:</b>
+            <select  class="controls" name="tipo">
+              <option value="cc">C.C</option>
+              <option value="ti">T.I</option>
+              <option value="Pasaporte">Pasaporte</option>
+            </select>
+            <input class="controls" type="number" name="numid" placeholder="Ingrese su numero de id">
+            <input class="controls" type="number" name="numc" placeholder="Ingrese su numero de contacto">
+            <b>Ingrese fecha de solicitud:</b>
+            <input type="date" class="controls" name="fecha" >
+            <hr>
+            <h5 class="h4">Motivos de solicitud</h5>
+            <hr><br>
+           <textarea cols="50" rows="2" class="controls" name="textarea" placeholder="Ingrese motivo de solicitud"></textarea>
+           <hr>
+            <h5 class="h4">Correo electronico</h5>
+            <hr><br>
+            <input class="controls" type="email" name="email"  placeholder="Ingrese su Correo electronico">
+            <input class="boton" type="submit" value="enviar" name="b4">  
+        </section>
+    </form>
+
+
+
+</body>
+</html>

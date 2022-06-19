@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio de sesion</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <script type="text/javascript" src="validacion.js"></script>
+  <link href="img/guella.png" rel="icon">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+
+<style> 
+body{
+	margin: 100px;;
+	color:black;
+	background:#90CAF9;
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background:url(https://st2.depositphotos.com/4441075/7697/v/600/depositphotos_76975367-stock-illustration-sign-with-domestic-pets-silhouettes.jpg) no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:black(40,57,101,.9);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:white;
+	border-color:white;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:black;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:black;
+	font-size:12px;
+}
+.login-form .group .button{
+	background:white;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#90CAF9;
+}
+.login-form .group .check:checked + label .icon{
+	background:#90CAF9;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
+</style>
+</head>
+<body>
+	 <!-- Fixed navbar -->
+	 <div id="navigation" class="navbar navbar-fixed-top">
+		<div class="container">
+		  <div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+			  <i class="fa fa-bars"></i>
+			</button>
+		  </div>
+		  <div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+			  <li><a href="iniciodesesion.html">Inicia Sesión</a></li>
+			  <li><a href="Formulario.html">Agenda Tu Cita</a></li>
+			  <li><a href="catalogo.html">Conoce Nuestros Catálogo</a></li>
+			  <li><a href="fh.html">Conoce el Historial Clinico de tu Mascota</a></li>
+			  <li><a href="index.html" class="smoothscroll">Volver al Inicio</a></li>
+			</ul>
+		  </div>
+		  <!--/.nav-collapse -->
+		</div>
+	  </div>
+
+    <form action="index-admin.html" method="post" onsubmit="return validate(this)">
+      <div class="login-wrap">
+        <div class="login-html">
+          <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar</label>
+          <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
+          <div class="login-form">
+            <div class="sign-in-htm">
+              <div class="group">
+                <label for="user" class="label" style="text-align:left;">Usuario</label>
+                <input id="user" type="text" class="input" name="usuario" > 
+              </div>
+              <div class="group">
+                <label for="pass" name="password" class="label" style="text-align:left;">Contraseña</label>
+                <input id="pass" type="text"  class="input" name="password" data-type="password" >
+              </div>
+
+              <p>Rol</p><br>
+              <input type="radio" id="radio1" name="comida">Administrador
+              <input type="radio" id="radio2" name="comida">Cliente
+              <input type="radio" id="radio3" name="comida">Veterinario
+              <br><br><br><br>
+            
+              <div class="group">
+                <input id="check" type="checkbox" class="check" checked>
+                <label for="check"><span class="icon"></span> Guardar mi sesion</label>
+              </div>
+			  <br><br>
+              <div class="group">
+               <a href="index-admin.html"><input type="submit" class="button" value="Iniciar"></a>
+              </div>
+              <div ></div>
+              <div class="foot-lnk">
+                <a href="#forgot">  <br><br> Olvido su contraseña?</a>
+              </div>
+            </div>
+
+			
+            <div class="sign-up-htm">
+              <div class="group">
+                <label for="nom" name="nom" class="label" style="text-align:left;">Nombres</label>
+                <input id="nom" type="text" class="input" name="nom" > 
+              </div>
+
+			  <div class="group">
+                <label for="apell" name="apell" class="label" style="text-align:left;">Apellidos</label>
+                <input id="apell" type="apell"  class="input" name="apell" data-type="apell" >
+              </div>
+
+			  <div class="group">
+                <label for="correo" name="correo" class="label" style="text-align:left;">Correo electronico</label>
+                <input id="correo" type="correo"  class="input" name="correo" data-type="correo" >
+              </div>
+
+			  <div class="group">
+                <label for="user" name="usuario" class="label" style="text-align:left;">Usuario</label>
+                <input id="user" type="usuario"  class="input" name="usuario" data-type="usuario" >
+              </div>
+
+              <div class="group">
+                <label for="pass" name="password" class="label" style="text-align:left;">Contraseña</label>
+                <input id="pass" type="text"  class="input" name="password" data-type="password" >
+              </div>
+              <br><br>
+
+              <div class="group">
+                <input type="submit" class="button" value="Registrarse">
+              </div>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+</body>
+</html>
+
+
+

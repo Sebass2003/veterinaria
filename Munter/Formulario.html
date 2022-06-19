@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Agendamiento de Citas</title>
+    <!--http://localhost/Proyecto/Formulario.html -->
+    <link rel="stylesheet" href="estilo.css">
+    <link href="img/guella.png" rel="icon">
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+    
+    <body>
+    <!-- Fixed navbar -->
+  <div id="navigation" class="navbar navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="iniciodesesion.html">Inicia Sesión</a></li>
+          <li><a href="Formulario.html">Agenda Tu Cita</a></li>
+          <li><a href="catalogo.html">Conoce Nuestros Catálogo</a></li>
+          <li><a href="fh.html">Conoce el Historial Clinico de tu Mascota</a></li>
+          <li><a href="index.html" class="smoothscroll">Volver al Inicio</a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+  </div>
+
+    <div class="registar">
+    <h2>AGENDAMIENTO DE CITAS</h2>
+    <form action="conexion.php" method="POST">
+        Fecha:
+        <input class="menu" type="date">
+        Hora:
+        <input class="menu" type="time" min="09:00" max="20:00">
+        Nombre:
+        <input class="menu" type="text">
+        Identificacion:
+        <input class="menu" type="text">
+        Telefono:
+        <input class="menu" type="text">
+        Correo:
+        <input class="menu" type="email" value="ejemplo@gmail.com" style="color: rgb(214, 214, 214) ;">
+        Nombre de la mascosa:
+        <input class="menu" type="text">
+        <br><br>
+        <input class="botton" type="submit" value="REGISTRAR CITA" name="b1">
+        <input class="botton" type="submit" value="CONSULTAR CITA" name="b2">
+
+        
+        
+      
+    </form>
+    </div>
+    <script type="text/javascript" src="formulario.js"></script>
+</body>
